@@ -86,7 +86,7 @@ nav ul li a {
 /* Media query for smaller screens */
 @media (max-width: 1000px) {
     h1 {
-        font-size: 40px; /* Adjust the font size for smaller screens */
+        font-size: 20px; /* Adjust the font size for smaller screens */
     }
 
     audio {
