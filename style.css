@@ -150,7 +150,7 @@ nav ul li a{
     z-index: -1;
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1000px) {
     /* Adjustments for large screens (adjust the breakpoint as needed) */
     .back-video {
         object-fit: fill;
