@@ -78,7 +78,7 @@ nav ul li a{
 /* Media query for smaller screens */
 @media (max-width: 767px) {
     h1 {
-        font-size: 65px; /* Adjust the font size for smaller screens */
+        font-size: 40px; /* Adjust the font size for smaller screens */
     }
 }
 .content h1:nth-child(1){
