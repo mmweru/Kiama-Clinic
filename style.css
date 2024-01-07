@@ -93,6 +93,12 @@ nav ul li a {
         font-size: 100px; /* Adjust the font size for "Kiama Beauty Clinic" */
         font-weight: 300; /* Adjust the font weight for "Kiama Beauty Clinic" */
     }
+    audio {
+        width: 40%; /* Adjust the width as needed for smaller screens */
+        position: fixed;
+        bottom: 35px;
+        margin-bottom: 40px;
+    }
 
 }
 
@@ -169,9 +175,7 @@ nav ul li a {
 
 audio {
     position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 35px;
     margin-bottom: 45px;
 }
 
