@@ -77,22 +77,25 @@ nav ul li a {
     z-index: 1;
 }
 
-.content h1 {
+/* .content h1 {
     font-size: 80px;
     color: #fff;
     font-weight: 335;
-}
+} */
 
 /* Media query for smaller screens */
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
     h1 {
-        font-size: 10px;
-        font-weight: 235; /* Adjust the font size for smaller screens */
+        font-size: 40px; /* Adjust the font size for smaller screens */
+    }
+
+    .clinic-text {
+        font-size: 20px; /* Adjust the font size for "Kiama Beauty Clinic" */
+        font-weight: 300; /* Adjust the font weight for "Kiama Beauty Clinic" */
     }
 
     audio {
-        width: 40%; /* Adjust the width as needed for smaller screens */
-        margin-bottom: 10px;
+        width: 80%; /* Adjust the width as needed for smaller screens */
     }
 }
 
