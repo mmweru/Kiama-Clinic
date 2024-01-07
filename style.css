@@ -96,8 +96,8 @@ nav ul li a {
     audio {
         width: 40%; /* Adjust the width as needed for smaller screens */
         position: fixed;
-        bottom: 35px;
-        margin-bottom: 40px;
+        bottom: 135px;
+        margin-bottom: 140px;
     }
 
 }
