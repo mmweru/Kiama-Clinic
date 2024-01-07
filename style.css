@@ -82,6 +82,24 @@ nav ul li a{
     color: #5b87d2;
     animation: animate 4s ease-in-out infinite;
 }
+.water-wave-text {
+    position: relative;
+    overflow: hidden;
+    font-size: 108px; /* Adjust as needed */
+    color: #fff;
+    font-weight: 335;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Optional for depth */
+    animation: water-wave 5s linear infinite;
+  }
+  
+  @keyframes water-wave {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-10%); /* Adjust for wave intensity */
+    }
+  }
 @keyframes animate {
     0%, 100% {
         clip-path:polygon(
@@ -122,26 +140,54 @@ nav ul li a{
     border-radius: 50px;
     margin-top: 20px;
 }
-.back-video{
-    position:absolute;
+
+.back-video {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     filter: none;
     z-index: -1;
-} 
-@media (min-aspect-ratio: 16/9){
-    .back-video{
-        width:100%;
-        height:auto;
+}
+
+@media (min-width: 100px) {
+    /* Adjustments for large screens (adjust the breakpoint as needed) */
+    .back-video {
+        object-fit: fill;
+        max-height: 99.9%; /* You can set a maximum height for very large screens */
+        margin: 0 auto; /* Center the video horizontally */
     }
 }
-@media (max-aspect-ratio: 16/9){
-    .back-video{
-        width:auto;
-        height:100%;
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
     }
 }
+
+/* @media (max-aspect-ratio: 4/3) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+} */
+
+
+
+/* @media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-aspect-ratio: 4/3) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+} */ */
 audio {
     position: fixed;
     bottom: 0;
