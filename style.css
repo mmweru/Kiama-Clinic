@@ -236,3 +236,29 @@ audio:hover {
     transform: translateX(-50%) scale(1.1);
     transition: transform 0.3s ease-in-out;
 }
+/*------------------course--------------------*/
+.about {
+    background-image: url('images/AboutKiama.png'); /* Replace with the path to your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for transparency */
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+    text-align: center;
+}
+
+.glass-container h2 {
+    color: #fff; /* Set the text color */
+}
+
+.glass-container p {
+    color: #fff; /* Set the text color */
+}
