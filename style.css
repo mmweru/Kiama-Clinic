@@ -143,12 +143,23 @@ nav .fa{
     .nav-links ul{
         padding: 30px;
     }
+    .content a {
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+        font-size: 2px;
+        border: 2px solid #fff;
+        padding: 14px 70px;
+        border-radius: 50px;
+        margin-top: 20px;
+    }
 
 }
 
 .content h1:nth-child(1) {
     color: transparent;
     -webkit-text-stroke: 1.5px #0455e3;
+    font-size: 40px;
 }
 
 .content h1:nth-child(2) {
@@ -156,15 +167,6 @@ nav .fa{
     animation: animate 4s ease-in-out infinite;
 }
 
-.water-wave-text {
-    position: relative;
-    overflow: hidden;
-    font-size: 80px;
-    color: #fff;
-    font-weight: 335;
-    text-shadow: 0 0 5px rgb(87, 114, 210);
-    animation: water-wave 35s linear infinite;
-}
 
 @keyframes water-wave {
     0% {
@@ -179,7 +181,7 @@ nav .fa{
     text-decoration: none;
     display: inline-block;
     color: #fff;
-    font-size: 24px;
+    font-size: 16px;
     border: 2px solid #fff;
     padding: 14px 70px;
     border-radius: 50px;
