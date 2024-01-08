@@ -14,11 +14,14 @@ body {
 }
 @media (max-width: 800px) {
     .box{
-        max-width: 300px;
+        max-width: 200px;
     }
     ul, ol {
         color: #000000;
         margin-left: 10px;
+    }
+    .text-wrapper{
+        font-size: 10px;
     }
 }
 
@@ -40,6 +43,7 @@ h1 {
 .text-wrapper {
     display: none;
     opacity: 0;
+    font-size: 15px;
     transition: opacity 1s ease-in-out;
 }
 
