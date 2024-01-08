@@ -44,7 +44,7 @@ h1 {
     display: none;
     opacity: 0;
     font-size: 15px;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 4s ease-in-out;
 }
 
 .text-wrapper.active {
