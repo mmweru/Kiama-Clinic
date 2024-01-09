@@ -1,0 +1,57 @@
+
+#map-container {
+    width: 100%;
+    height: 400px;
+}
+
+#map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+#contact-info p {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Align items vertically */
+}
+
+#contact-info {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; 
+}
+
+#contact-info i {
+    margin-right: 5px;
+}
+
+@media (max-width: 700px) {
+    #map-container {
+        height: 300px;
+    }
+}
+.contact-link {
+    display: inline-flex; /* Combine icon and text */
+    align-items: center; /* Align vertically */
+    margin-right: 15px; /* Add spacing */
+}
+
+.contact-link i {
+    margin-right: 5px; /* Space between icon and text */
+}
+a {
+    text-decoration: none;
+}
+.contact-link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #81027ecc; 
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out;
+}
+
+.contact-link:hover:after {
+    opacity: 1;
+}
