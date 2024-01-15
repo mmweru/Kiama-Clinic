@@ -123,12 +123,13 @@
   /* Adjust layout for smaller screens */
   @media (max-width: 408px) {
     .swiper {
-      flex-direction: column; /* Stack cards vertically */
-    }
-  
-    .swiper-slide {
-      width: 100%; /* Occupy full slide width on small screens */
-    }
+        flex-direction: row; /* Arrange cards horizontally */
+        overflow-x: scroll; /* Enable horizontal scrolling */
+      }
+    
+      .swiper-slide {
+        width: 100%; /* Occupy full slide width on small screens */
+      }
     .card {
         height: fit-content;
         width: fit-content;
