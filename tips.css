@@ -138,6 +138,10 @@
         width: 30px; /* Adjust width as needed */
         height: 30px; /* Adjust height as needed */
       }
+      .lottie-player2 {
+        width: fit-content;
+        height: fit-content;
+      }
   }
 
   
