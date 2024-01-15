@@ -13,7 +13,7 @@
   }
   
   .swiper-slide {
-    width: 100%; /* Occupy full slide width on all screen sizes */
+    width: 30%; /* Occupy full slide width on all screen sizes */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -108,4 +108,31 @@
         margin-top: 1px;
       }
   }
+
+  
+  /* Default layout for larger screens */
+.swiper {
+    display: flex; /* Arrange cards horizontally */
+    flex-wrap: nowrap; /* Prevent cards from wrapping to next line */
+  }
+  
+  .swiper-slide {
+    width: 30%; /* Adjust card width as needed */
+  }
+  
+  /* Adjust layout for smaller screens */
+  @media (max-width: 408px) {
+    .swiper {
+      flex-direction: column; /* Stack cards vertically */
+    }
+  
+    .swiper-slide {
+      width: 100%; /* Occupy full slide width on small screens */
+    }
+    .card {
+        height: fit-content;
+    }
+  }
+
+  
   
