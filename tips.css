@@ -1,0 +1,109 @@
+/* Neon color scheme and card styles */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 30px);
+    padding: 15px 0;
+    overflow: hidden;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    width: 30%; /* Adjust card width as needed */
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease-in-out;
+  }
+
+.card {
+    width: 100%; /* Occupy full slide width */
+    height: 80vh; /* Adjusted for better visibility */
+    margin: 0 auto;
+    border-radius: 10px;
+    display: flex;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+  }
+.card-image {
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-text {
+    width: 100%;
+    padding: 20px;
+}
+
+.card-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.swiper-wrapper {
+    display: flex; /* Enable horizontal arrangement */
+  }
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+}
+/* ... existing styles ... */
+
+@media (max-width: 768px) {
+    .card-text h2 {
+      font-size: 14px; /* Reduce heading size for medium screens */
+    }
+    .card-text p {
+      font-size: 12px; /* Reduce paragraph size for medium screens */
+    }
+  
+    /* Scale Lottie animations based on container width */
+    .card-image dotlottie-player {
+      width: calc(30% - 10px); /* Dynamically adjust width (50% of card minus padding) */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Further reduce font sizes for very small screens */
+    .card-text h2 {
+      font-size: 12px;
+    }
+    .card-text p {
+      font-size: 8px;
+    }
+  
+    /* Scale Lottie animations for single card display */
+    .card-image dotlottie-player {
+      width: 40%; /* Adjust width for stacked cards */
+    }
+  }
+  
