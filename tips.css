@@ -5,25 +5,24 @@
     height: calc(100vh - 30px);
     padding: 15px 0;
     overflow: hidden;
-}
-
-.swiper {
+  }
+  
+  .swiper {
     width: 100%;
     height: 100%;
   }
   
   .swiper-slide {
-    width: 30%; /* Adjust card width as needed */
-    margin-right: 15px;
+    width: 100%; /* Occupy full slide width on all screen sizes */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: transform 0.5s ease-in-out;
   }
-
-.card {
-    width: 100%; /* Occupy full slide width */
+  
+  .card {
+    width: 80%; /* Occupy 80% of slide width */
     height: 80vh; /* Adjusted for better visibility */
     margin: 0 auto;
     border-radius: 10px;
@@ -36,25 +35,26 @@
     color: #fff;
     font-family: sans-serif;
   }
-.card-image {
+  
+  .card-image {
     width: 100%;
     height: 50%;
     overflow: hidden;
     position: relative;
-}
-
-.card-text {
+  }
+  
+  .card-text {
     width: 100%;
     padding: 20px;
-}
-
-.card-text h2 {
+  }
+  
+  .card-text h2 {
     font-size: 24px;
     margin-bottom: 10px;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
+  }
+  
+  .swiper-button-prev,
+  .swiper-button-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -63,60 +63,49 @@
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 50%;
     cursor: pointer;
-}
-.swiper-wrapper {
+  }
+  
+  .swiper-wrapper {
     display: flex; /* Enable horizontal arrangement */
   }
-
-.swiper-button-prev {
+  
+  .swiper-button-prev {
     left: 10px;
-}
-
-.swiper-button-next {
+  }
+  
+  .swiper-button-next {
     right: 10px;
-}
-/* ... existing styles ... */
-
-/* ... existing styles ... */
-
-@media (max-width: 768px) {
-    /* ... existing media query styles ... */
+  }
   
-    .swiper-wrapper {
-      touch-action: pan-y; /* Enable vertical scrolling on touch devices */
-    }
-  
+  /* Responsive styles */
+  @media (max-width: 768px) {
     .swiper-slide {
-      cursor: grab; /* Indicate grabbable element */
+      width: 100%; /* Occupy full slide width on small screens */
     }
   
-    .swiper-slide:active {
-      cursor: grabbing; /* Indicate active grabbing */
+    .card {
+      height: 60vh; /* Reduce card height on small screens for better visibility */
     }
-  
-    /* Visual cues for swipeability (optional) */
-    .swiper-wrapper::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.1);
-      transform: translate(-50%, -50%);
-    }
-  
-    .swiper-wrapper::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      right: 50%;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.1);
-      transform: translate(50%, -50%);
-    }
+    .card-text {
+        width: 100%;
+        padding: 20px;
+        font-size: 8px; /* Adjust text size as needed */
+      }
+      
+      .card-text h2 {
+        font-size: 14px; /* Adjust heading size as needed */
+        margin-bottom: 10px;
+      }
+
+      .lottie-player {
+        width: 60px; /* Adjust width as needed */
+        height: 60px; /* Adjust height as needed */
+      }
+
+      .lottie-player1 {
+        width: 2px; /* Adjust width as needed */
+        height: 2px; /* Adjust height as needed */
+        margin-top: 1px;
+      }
   }
   
