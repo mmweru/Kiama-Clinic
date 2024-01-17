@@ -99,6 +99,11 @@ nav .logo {
 } */
 
 /* Media query for smaller screens */
+@media (min-width: 800px) {
+    i img {
+        display: none; 
+    }
+  }
 @media (max-width: 800px) {
     .content h1{
         font-size: smaller; /* Adjust the font size for smaller screens */
@@ -133,6 +138,7 @@ nav .logo {
     }
     .nav-links ul{
         padding: 30px;
+        font-size: 15px;
     }
     .content a {
         text-decoration: none;
