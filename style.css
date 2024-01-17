@@ -103,7 +103,7 @@ nav .fa{
 /* Media query for smaller screens */
 @media (max-width: 800px) {
     .content h1{
-        font-size: 40px; /* Adjust the font size for smaller screens */
+        font-size: smaller; /* Adjust the font size for smaller screens */
     }
     nav .logo{
         width: 60px;
@@ -130,7 +130,7 @@ nav .fa{
         transition: 1s;
     }
     .hero .back-video{
-        object-fit: fill;
+        object-fit: cover;
         width: 100%;
     }
     nav .fa{

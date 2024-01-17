@@ -14,14 +14,14 @@ body {
 }
 @media (max-width: 800px) {
     .box{
-        max-width: 200px;
+        max-width: 150px;
     }
     ul, ol {
         color: #000000;
-        margin-left: 10px;
+        margin-left: smaller;
     }
     .text-wrapper{
-        font-size: 10px;
+        font-size: smaller;
     }
 }
 
