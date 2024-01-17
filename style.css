@@ -90,9 +90,7 @@ nav .logo {
     position: relative;
     z-index: 1;
 }
-nav .fa{
-    display: none;
-}
+
 
 /* .content h1 {
     font-size: 80px;
@@ -132,13 +130,6 @@ nav .fa{
     .hero .back-video{
         object-fit: cover;
         width: 100%;
-    }
-    nav .fa{
-        display:block;
-        color: #fff;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer;
     }
     .nav-links ul{
         padding: 30px;
