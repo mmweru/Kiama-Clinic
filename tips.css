@@ -2,24 +2,31 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-  overflow: scroll;
-}
-
-.container,
-.sketchfab-embed-wrapper {
-  height: 100vh;
-  width: 100%;
-}
-
-.container {
-  background: url("https://sketchfab.com/models/c7e086db5091450697254a4ab07f7a2a/embed");
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  height: 100vh;
 }
-.sketchfab-embed-wrapper {
-  z-index: -1; /* Send Sketchfab behind card */
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Ensure the video is behind other content */
+}
+
+.box {
+  background: linear-gradient(to right, #ff004d, #00f2ff, #ffff00);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: static;
+  opacity: 0.9; /* Set the opacity level */
 }
 
 @media (max-width: 800px) {
@@ -29,28 +36,24 @@ body {
   .text-wrapper {
     font-size: smaller;
   }
-}
-
-.box {
-  background: linear-gradient(to right, #ff004d, #00f2ff, #ffff00);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
-  padding: 20px;
-  width: 80%;
-  max-width: 800px;
-  overflow: hidden;
-  position: relative;
+  .card-text h2 {
+    font-size: 10px;
+  }
+  h1{
+    font-size: 7px;
+  }
 }
 
 h1 {
   text-align: center;
   color: #ac1fedc7;
+  font-size: 15px;
 }
 
 .text-wrapper {
-  display: none;
+  display:none;
   opacity: 0;
-  font-size: 15px;
+  font-size: 10px;
   transition: opacity 4s ease-in-out;
 }
 
@@ -67,11 +70,11 @@ h1 {
 }
 
 .card-text {
-  width: 100%;
+  width: 80%;
   padding: 20px;
 }
 
 .card-text h2 {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
