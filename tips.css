@@ -15,7 +15,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1; /* Ensure the video is behind other content */
+  z-index: -1;
 }
 
 .box {
@@ -26,21 +26,21 @@ body {
   height: 100%;
   overflow: hidden;
   position: static;
-  opacity: 0.9; /* Set the opacity level */
+  opacity: 0.9;
 }
 
 @media (max-width: 800px) {
   .box {
-    max-width: 200px;
+      max-width: 200px;
   }
   .text-wrapper {
-    font-size: smaller;
+      font-size: 12px; /* Adjust font size as needed */
   }
   .card-text h2 {
-    font-size: 10px;
+      font-size: 10px;
   }
-  h1{
-    font-size: 7px;
+  h1 {
+      font-size: 7px;
   }
 }
 
@@ -51,7 +51,7 @@ h1 {
 }
 
 .text-wrapper {
-  display:none;
+  display: none;
   opacity: 0;
   font-size: 13px;
   transition: opacity 4s ease-in-out;

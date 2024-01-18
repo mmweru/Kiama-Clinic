@@ -6,10 +6,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiama Beauty Clinic</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="manifest" href="manifest.json">
+    <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('service-worker.js')
@@ -26,50 +28,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
 <body>
-    <section class="hero">
-
-        <video autoplay loop muted plays-inline class="back-video">
-            <source src="images/KiamaClip.mp4" type="video/mp4">
-        </video>
-        <audio controls autoplay loop>
-            <source src="images/FirstRecord.mp3" type="audio/mpeg">
-        </audio>
-        <nav>
-            <img src="images/logoclinic.png" class="logo">
-            <div class="nav-links" id="navLinks">
-                <i onclick="hideMenu()">
-                    <img src="images/x.png" alt="Close Menu">
-                </i>
-                
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="tips.html">TIPS</a></li>
-                    <li><a href="ChatBot-Starter-main/templates/chat.html">ASK ME</a></li>
-                    <li><a href="contact.html">CONTACT US</a></li>
-                </ul>
+    <div class="grid-background">
+        <div class="center-text">
+            <div class="logo">
+                <img src="images/lipo.png" alt="Logo"> <!-- Replace 'logo.png' with the path to your logo image -->
             </div>
-            <i onclick="showMenu()">
-                <img src="images/menu.png" alt="Close Menu">
-            </i>
+            <h1>Kiama Beauty Clinic</h1>
+            <div id="typed-text"></div>
             
-        </nav>
-        <div class="content">
-            <h1>KIAMA BEAUTY CLINIC</h1>
-            <a href="#">Explore</a>
-        </div>
-
-    </section>  
+      </div>
+    </div>
 <!--------JS For Toggle Menu-->
-<script>
-    var navLinks = document.getElementById("navLinks");
+<script src="typing.js"></script>
 
-    function showMenu(){
-        navLinks.style.right = "0";
-    }
-    function hideMenu(){
-        navLinks.style.right = "-200px";
-    }
-</script>
 </body>
 </html>

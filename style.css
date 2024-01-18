@@ -1,261 +1,118 @@
-* {
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
+body, html {
+    height: 100%;
+    margin: 0;
+    background: black;
+    overflow: hidden;
     font-family: 'Poppins', sans-serif;
 }
 
-.hero {
-    position: relative;
-    z-index: 0;
+.grid-background {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(50px, 1fr));
+    height: 100%;
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgb(230, 0, 92), rgb(153, 0, 153), rgb(0, 184, 230), rgb(26, 117, 255));
-    position: absolute;
-    object-fit: cover;
-    padding: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 }
 
-nav {
-    width: 100%;
+.grid-background::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
-    padding: 20px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav .logo {
-    width: 70px;
-    border-radius: 18px;
-}
-.nav-links{
-    flex: 1;
-    text-align: right;
-}
-.nav-links ul li{
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-.nav-links ul li a{
-    color: #fff;
-    text-decoration: none;
-    font-size: 13px;
-}
-.nav-links ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #235df1;
-    display: block;
-    margin: auto;
-    transition: 0.5s; 
-}
-.nav-links ul li:hover::after{
-    width:100%;
-}
-
-@keyframes slideRotateReturn {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%) rotate(0deg);
-    }
-    25% {
-        opacity: 1;
-        transform: translateX(0) rotate(180deg);
-    }
-    50% {
-        opacity: 1;
-        transform: translateX(0) rotate(360deg);
-    }
-    75% {
-        opacity: 1;
-        transform: translateX(0) rotate(540deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(100%) rotate(720deg);
-    }
-}
-
-.content {
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-
-/* .content h1 {
-    font-size: 80px;
-    color: #fff;
-    font-weight: 335;
-} */
-
-/* Media query for smaller screens */
-@media (min-width: 800px) {
-    i img {
-        display: none; 
-    }
-  }
-@media (max-width: 800px) {
-    .content h1{
-        font-size: smaller; /* Adjust the font size for smaller screens */
-    }
-    nav .logo{
-        width: 60px;
-    }
- 
-    .hero audio {
-        width: 40%; /* Adjust the width as needed for smaller screens */
-        position: fixed;
-        bottom: 135px;
-        margin-bottom: 140px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
-        position: absolute;
-        background: #b304e3;
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    .hero .back-video{
-        object-fit: cover;
-        width: 100%;
-    }
-    .nav-links ul{
-        padding: 30px;
-        font-size: 15px;
-    }
-    .content a {
-        text-decoration: none;
-        display: inline-block;
-        color: #fff;
-        font-size: 2px;
-        border: 2px solid #fff;
-        padding: 14px 70px;
-        border-radius: 50px;
-        margin-top: 20px;
-    }
-
-}
-
-.content h1:nth-child(1) {
-    color: transparent;
-    -webkit-text-stroke: 1.5px #0455e3;
-    font-size: 40px;
-}
-
-.content h1:nth-child(2) {
-    color: #5b87d2;
-    animation: animate 4s ease-in-out infinite;
-}
-
-
-@keyframes water-wave {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(10%);
-    }
-}
-
-.content a {
-    text-decoration: none;
-    display: inline-block;
-    color: #fff;
-    font-size: 16px;
-    border: 2px solid #fff;
-    padding: 14px 70px;
-    border-radius: 50px;
-    margin-top: 20px;
-}
-.content a:hover{
-    border: 1px solid #3659f4;
-    background: #3659f4;
-    transition: 1s;
-}
-
-.back-video {
-    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    filter: none;
-    z-index: -1;
+    background: linear-gradient(rgb(247, 246, 242) 1px, transparent 1px), linear-gradient(90deg, rgb(251, 250, 245) 1px, transparent 1px), radial-gradient(circle, rgb(245, 245, 240) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: twinkling 2s infinite;
 }
 
-
-@media (min-width: 1000px) {
-    .back-video {
-        object-fit: fill;
-        max-height: 99.9%;
-        margin: 0 auto;
+@keyframes twinkling {
+    0% {
+        background-position: 0 0, 0 0, 0 0;
+    }
+    100% {
+        background-position: -50px 50px, 50px -50px, 50px 50px;
     }
 }
 
-@media (min-aspect-ratio: 16/9) {
-    .back-video {
-        width: 100%;
-        height: auto;
+/* Your existing CSS */
+
+.logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Frame the logo in a round circle */
+    animation: glow 2s infinite; /* Add a glowing animation */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px #ff0000, 0 0 25px #ff0000, 0 0 50px #ff0000, 0 0 200px #ff0000;
+    }
+    40% {
+        box-shadow: 0 0 5px #00ff00, 0 0 25px #00ff00, 0 0 50px #00ff00, 0 0 200px #00ff00;
+    }
+    80% {
+        box-shadow: 0 0 5px #0000ff, 0 0 25px #0000ff, 0 0 50px #0000ff, 0 0 200px #0000ff;
+    }
+    100% {
+        box-shadow: 0 0 5px #ff0000, 0 0 25px #ff0000, 0 0 50px #ff0000, 0 0 200px #ff0000;
     }
 }
 
-@media (max-aspect-ratio: 4/3) {
-    .back-video {
-        width: auto;
-        height: 100%;
-    }
-}
 
-.hero audio {
-    position: fixed;
-    bottom: 35px;
-    margin-bottom: 45px;
-}
-
-/* Add a hover effect */
-audio:hover {
-    transform: translateX(-50%) scale(1.1);
-    transition: transform 0.3s ease-in-out;
-}
-/*------------------course--------------------*/
-.about {
-    background-image: url('images/AboutKiama.png'); /* Replace with the path to your background image */
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.glass-container {
-    background: rgba(255, 255, 255, 0.2); /* Adjust the alpha value for transparency */
-    padding: 20px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px); /* Glassmorphism effect */
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    width: 100%;
 }
 
-.glass-container h2 {
-    color: #fff; /* Set the text color */
+.center-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    color: gold; /* Adjust the color to golden */
+    margin-bottom: 20px;
+    animation: fadeIn 3s ease-in-out;
+    background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(28, 143, 219));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: waterwave 10s infinite;
+    animation: fadeIn 3s ease-in-out;
+
 }
 
-.glass-container p {
-    color: #fff; /* Set the text color */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
+@keyframes waterwave {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
+/* Your existing CSS */
+
+#typed-text {
+    color: white;
+    font-size: 16px;
+    margin-top: 18px;
+}
+
+

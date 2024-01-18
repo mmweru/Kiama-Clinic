@@ -5,12 +5,22 @@ body {
 }
 
 .container {
-    background: url('images/AboutKiama.png') center/cover fixed no-repeat; /* Replace 'your-background-image.jpg' with the actual image path */
+    position: relative; /* Allow video to be positioned behind other elements */
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     object-fit: contain;
+}
+.back-video {
+    position: absolute; /* Position the video absolutely within the container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    object-fit: cover; /* Ensure video covers the entire container */
+    z-index: -1; /* Place the video behind other content */
 }
 @media (max-width: 800px) {
     .box{
@@ -22,6 +32,9 @@ body {
     }
     .text-wrapper{
         font-size: smaller;
+    }
+    .back-video {
+        height: 300px;
     }
 }
 
