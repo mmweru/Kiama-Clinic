@@ -1,3 +1,44 @@
+main section {
+    display: none; /* Hide sections initially */
+  }
+  
+  /* Show active section based on URL hash */
+  main section:target {
+    display: block;
+    padding: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+nav {
+position: sticky;
+top: 0; /* Adjust as needed */
+right: 10px; /* Adjust as needed */
+text-align: right;
+transition: height 0.3s ease-in-out;
+}
+nav a {
+text-decoration: none;
+}
+
+nav a:hover {
+    outline: 2px solid hotpink; /* Adjust colors as desired */
+    outline-offset: 5px;
+    animation: neon-glow 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes neon-glow {
+    from {
+      outline-color: hotpink;
+    }
+    to {
+      outline-color: limegreen;
+    }
+  }
+  
+    
+    
 body, html {
     height: 100%;
     margin: 0;
@@ -114,5 +155,14 @@ body, html {
     font-size: 16px;
     margin-top: 18px;
 }
+
+
+  
+
+
+
+
+
+
 
 
