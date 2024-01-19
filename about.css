@@ -1,81 +1,87 @@
 body {
     margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
 
-.container {
-    position: relative; /* Allow video to be positioned behind other elements */
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    object-fit: contain;
+.background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place it behind the content */
 }
 .back-video {
-    position: absolute; /* Position the video absolutely within the container */
-    top: 0;
-    left: 0;
+    position: absolute;
     width: 100%;
-    height: 800px;
-    object-fit: cover; /* Ensure video covers the entire container */
-    z-index: -1; /* Place the video behind other content */
+    height: 100%;
+    object-fit: cover;
+    filter: none;
+    z-index: -1;
 }
-@media (max-width: 800px) {
-    .box{
-        max-width: 150px;
-    }
-    ul, ol {
-        color: #000000;
-        margin-left: smaller;
-    }
-    .text-wrapper{
-        font-size: smaller;
-    }
+@media (min-width: 1000px) {
     .back-video {
+        object-fit: fill;
+        max-height: 99.9%;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 700px) {
+    .back-video {
+        object-fit: cover;
+    }
+}
+
+
+.glass-card-container {
+    display: flex;
+    position: relative;
+    animation: moveCards 22s linear infinite; /* Adjust the animation duration as needed */
+}
+
+.glass-card {
+    flex: 0 0 auto;
+    width: 900px;
+    height: 300px;
+    padding: 20px;
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+@keyframes moveCards {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Hide audio controls */
+audio {
+    display: none;
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 600px) {
+    .glass-card {
+        width: 100%; /* Adjust the width and height as needed */
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .glass-card {
+        width: 100%; /* Adjust the width and height as needed */
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 901px) {
+    .glass-card {
+        width: 900px;
         height: 300px;
     }
 }
-
-.box {
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    padding: 20px;
-    backdrop-filter: blur(10px);
-    width: 80%;
-    max-width: 800px;
-    overflow: hidden;
-}
-
-h1 {
-    text-align: center;
-    color: #ac1fedc7;
-}
-
-.text-wrapper {
-    display: none;
-    opacity: 0;
-    font-size: 15px;
-    transition: opacity 4s ease-in-out;
-}
-
-.text-wrapper.active {
-    display: block;
-    opacity: 1;
-}
-
-h2 {
-    color: #0023d0c7;
-}
-
-p {
-    color: #080808;
-}
-
-ul, ol {
-    color: #000000;
-    margin-left: 20px;
-}
-
-/* Additional styles as needed */

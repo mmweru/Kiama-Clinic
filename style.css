@@ -1,50 +1,16 @@
-main section {
-    display: none; /* Hide sections initially */
-  }
-  
-  /* Show active section based on URL hash */
-  main section:target {
-    display: block;
-    padding: 40px;
-    margin-bottom: 60px;
-    text-align: center;
-    font-size: 16px;
-  }
-
-nav {
-position: sticky;
-top: 0; /* Adjust as needed */
-right: 10px; /* Adjust as needed */
-text-align: right;
-transition: height 0.3s ease-in-out;
-}
-nav a {
-text-decoration: none;
-}
-
-nav a:hover {
-    outline: 2px solid hotpink; /* Adjust colors as desired */
-    outline-offset: 5px;
-    animation: neon-glow 1s ease-in-out infinite alternate;
-  }
-  
-  @keyframes neon-glow {
-    from {
-      outline-color: hotpink;
-    }
-    to {
-      outline-color: limegreen;
-    }
-  }
-  
-    
-    
 body, html {
     height: 100%;
     margin: 0;
     background: black;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section Styles */
+.hero {
+    height: 100%;
+    width: 100%;
+    position: relative;
 }
 
 .grid-background {
@@ -77,13 +43,44 @@ body, html {
     }
 }
 
-/* Your existing CSS */
+/* Navigation Menu Styles */
+.hero .navigation-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+}
+
+.hero .navigation-menu a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    position: relative;
+}
+
+.hero .navigation-menu a:hover {
+    outline: 2px solid transparent;
+    animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+    from {
+        outline-color: transparent;
+        box-shadow: 0 0 5px #ff00ff, 0 0 20px #ff00ff, 0 0 50px #ff00ff, 0 0 100px #ff00ff;
+    }
+    to {
+        outline-color: #ff00ff;
+        box-shadow: 0 0 5px #ff00ff, 0 0 20px #ff00ff, 0 0 50px #ff00ff, 0 0 100px #ff00ff;
+    }
+}
+
+/* Your existing CSS for logo, center-text, etc. */
 
 .logo img {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* Frame the logo in a round circle */
-    animation: glow 2s infinite; /* Add a glowing animation */
+    border-radius: 50%;
+    animation: glow 2s infinite;
 }
 
 @keyframes glow {
@@ -101,7 +98,6 @@ body, html {
     }
 }
 
-
 .center-text {
     position: absolute;
     top: 50%;
@@ -114,7 +110,7 @@ body, html {
 .center-text h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
-    color: gold; /* Adjust the color to golden */
+    color: gold;
     margin-bottom: 20px;
     animation: fadeIn 3s ease-in-out;
     background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(28, 143, 219));
@@ -123,7 +119,6 @@ body, html {
     -webkit-text-fill-color: transparent;
     animation: waterwave 10s infinite;
     animation: fadeIn 3s ease-in-out;
-
 }
 
 @keyframes fadeIn {
@@ -147,22 +142,9 @@ body, html {
     }
 }
 
-
-/* Your existing CSS */
-
+/* Your existing CSS for #typed-text and other styles */
 #typed-text {
     color: white;
     font-size: 16px;
     margin-top: 18px;
 }
-
-
-  
-
-
-
-
-
-
-
-

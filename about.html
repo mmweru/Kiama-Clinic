@@ -5,136 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
     <link rel="stylesheet" href="about.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;1,800&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css">
 </head>
 <body>
-    <video autoplay loop muted plays-inline class="back-video">
-        <source src="images/KiamaClip.mp4" type="video/mp4">
-    </video>
-    <audio controls autoplay loop>
-        <source src="images/FirstRecord.mp3" type="audio/mpeg">
-    </audio>
-    <div class="container">
-        <marquee>
-            <h1><marquee>Kiama Beauty Clinic</marquee></h1>
-            <div class="card-section">
-                <div class="text-wrapper text-wrapper1 active">
-                    <h2>Welcome Lovelies!</h2>
-                    <p>Our clinic is based in the beautiful city of Norwich U.K. Explore our stretch marks and scar tattoo camouflage hub for personalised beauty treatments. Our expert team offer tailored treatments customized to suit your skin concern prioritising your needs and treating you as an individual. Beyond stretch marks and scar treatments we offer non cosmetic enhancements tailored to you. Initial consultation for all treatments will be offered free of charge, a booking fee will need to be paid should you wish to start your treatment. Patch tests will also be offered treatments that require this.</p>
-                 </div>
-            </div>
-            <div class="card-section">
-                <div class="text-wrapper text-wrapper2">
-                    <h2>Our commitment to you</h2>
-                    <p>
-                        <ul>
-                            <li>All treatments are offered after a consultation to assess your suitability for treatments. You will be informed during initial consultation whether we can ahead with treatment and if not, we will inform you why. Our customers are at the heart of our business and we aim to provide customer satisfaction. The team's commitment goes beyond camouflaging imperfections; it's about embracing your uniqueness, listening to your preferences and wishes, walking with you through your journey with us ensuring you are safe and looked after. Welcome to a space where your uniqueness is honoured and celebrated.</li>
-                            <li>We will never pressure you to book treatments, information will be provided for you to make your own informed choice.</li>
-                            <li>All of our practices are safe and ethical, treatments will never be offered without assessing suitability for them, Our clinic has a lincence from our local council which is displayed in our clinic, We are up to date with immunisation, Covid, Hepatitis B, Measles Mumps and Rubella</li>
-                            <li>We are up to date with our training and are fully insured to offer treatments in our clinic.</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="card-section">
-                <div class="text-wrapper text-wrapper3">
-                    <h2>Stretch Marks and Scars Tattoo Camouflage(With Ink)</h2>
-                    <p>
-                        <ul>
-                            <li>An innovative treament that works by tattooing customised ink that blends in with your skin colour to make your marks and scars less visible. You will need a consultation to discuss what treatment will be suitable for your needs. More than 1 session may be required for better results and each session is charged separately.</li>
-                            <li>Please be aware that we require you to follow pre-treatment and aftercare instructions on all treatments for better results.</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="card-section">
-                <div class="text-wrapper text-wrapper4">
-                    <h2>Inkless stretch marks and scars tattoo camouflage(MCA Needling)</h2>
-                    <p>
-                        <ul>
-                            <li>This method invloves using tattoo machines and serums to carefully penetrate the skin and treat areas that need repairing. Minimal trauma is initiated to breakdown the scar tissue and stimulate collagen during healing process.</li>
-                            <li>Please be aware that tattooing with ink may not be necessary, this will be discussed further during initial consultation</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="card-section">
-                <div class="text-wrapper text-wrapper5">
-                    <h2>Important information</h2>
-                    <p>
-                        <ol>
-                            <li>
-                                Please note that <b>Depending on your skin concern, example strech marks texture or bumpy scars we will need to start with the inkless method to see how your skin will respond before progressing with the treatment. A minimum of 3 sessions is recommended for better results.</b>
-                            </li>
-                            <li>
-                                Results vary from person to person.
-                            </li>
-                            <li>
-                                All inks and creams used are vegan friendly and cruelty free.
-                            </li>
-                            <li> Initial consultation is <b>free</b> for all treaments. A £50 deposit will then be payable to secure your booking for any treatments.</li>
-                            <li><i>No refunds will be given after receiving treatment or failure to reschedule another date 48 hours before your appointment</i></li>
-                        </ol>
-                    </p>
-                </div>
-            </div>
-            <div class="card-section">
-                <div class="text-wrapper text-wrapper6">
-                    <h2>Additional Services and price guide</h2>
-                    <p>
-                        <ul>
-                            <li>Lip filler 0.5ml £90</li>
-                            <li>Lip filler 0.7ml £100</li>
-                            <li>Lip filler 1.1ml £110</li>
-                            <li>Lip dissolve 0.7ml £100</li>
-                            <li>Skin booster 0.7ml £150</li>
-                            <li>Inkless patch test for stretch marks and scars £45</li>
-                            <li>Patch test for stretch marks and scars with ink £60</li>
-                            <li>Stretch marks & scar tattoo camouflage, prices start from £200</li>
-                            <li>Small scars from £150</li>
-                            <li>MCA inkless skin needling from £200, small scars from £150</li>
-                            <li><b><i>£50 booking fee required</i></b></li>
-                        </ul>
-                    </p>
-                </div>
-            </div>    
-        </marquee>
+    <div class="background">
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="images/KiamaClip.mp4" type="video/mp4">
+        </video>
     </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Get all text wrapper elements
-            const textWrappers = document.querySelectorAll('.text-wrapper');
     
-            // Function to show the text wrapper at a specific index
-            function showTextWrapper(index) {
-                textWrappers.forEach((wrapper, i) => {
-                    if (i === index) {
-                        wrapper.classList.add('active');
-                    } else {
-                        wrapper.classList.remove('active');
-                    }
-                });
-            }
-    
-            // Function to handle the animation sequence
-            function animateTextWrappers() {
-                let currentIndex = 0;
-    
-                function animateNext() {
-                    showTextWrapper(currentIndex);
-                    currentIndex = (currentIndex + 1) % textWrappers.length;
-                    setTimeout(animateNext, 5000); // Change this value to control the delay between animations
-                }
-    
-                animateNext();
-            }
-    
-            // Start the animation sequence
-            animateTextWrappers();
-        });
-    </script>
+    <div class="glass-card-container">
+        <div class="glass-card">
+            <h2>Welcome Lovelies!</h2>
+            <p>Our clinic is based in the beautiful city of Norwich U.K. Explore our stretch marks and scar tattoo camouflage hub for personalised beauty treatments. Our expert team offer tailored treatments customized to suit your skin concern prioritising your needs and treating you as an individual. Beyond stretch marks and scar treatments we offer non cosmetic enhancements tailored to you. Initial consultation for all treatments will be offered free of charge, a booking fee will need to be paid should you wish to start your treatment. Patch tests will also be offered treatments that require this.</p>
+        </div>
+        <div class="glass-card">
+            <h2>Our commitment to you</h2>
+            <p>
+                <ul>
+                    <li>All treatments are offered after a consultation to assess your suitability for treatments. You will be informed during initial consultation whether we can ahead with treatment and if not, we will inform you why. Our customers are at the heart of our business and we aim to provide customer satisfaction. The team's commitment goes beyond camouflaging imperfections; it's about embracing your uniqueness, listening to your preferences and wishes, walking with you through your journey with us ensuring you are safe and looked after. Welcome to a space where your uniqueness is honoured and celebrated.</li>
+                    <li>We will never pressure you to book treatments, information will be provided for you to make your own informed choice.</li>
+                    <li>All of our practices are safe and ethical, treatments will never be offered without assessing suitability for them, Our clinic has a lincence from our local council which is displayed in our clinic, We are up to date with immunisation, Covid, Hepatitis B, Measles Mumps and Rubella</li>
+                    <li>We are up to date with our training and are fully insured to offer treatments in our clinic.</li>
+                </ul>
+            </p>
+        </div>
+        <div class="glass-card">
+            <h2>Stretch Marks and Scars Tattoo Camouflage(With Ink)</h2>
+            <p>
+                <ul>
+                    <li>An innovative treament that works by tattooing customised ink that blends in with your skin colour to make your marks and scars less visible. You will need a consultation to discuss what treatment will be suitable for your needs. More than 1 session may be required for better results and each session is charged separately.</li>
+                    <li>Please be aware that we require you to follow pre-treatment and aftercare instructions on all treatments for better results.</li>
+                </ul>
+            </p>
+        </div>
+        <div class="glass-card">
+            <h2>Inkless stretch marks and scars tattoo camouflage(MCA Needling)</h2>
+            <p>
+                <ul>
+                    <li>This method invloves using tattoo machines and serums to carefully penetrate the skin and treat areas that need repairing. Minimal trauma is initiated to breakdown the scar tissue and stimulate collagen during healing process.</li>
+                    <li>Please be aware that tattooing with ink may not be necessary, this will be discussed further during initial consultation</li>
+                </ul>
+            </p>
+        </div>
+        <div class="glass-card">
+            <h2>Important information</h2>
+            <p>
+                <ol>
+                    <li>
+                        Please note that <b>Depending on your skin concern, example strech marks texture or bumpy scars we will need to start with the inkless method to see how your skin will respond before progressing with the treatment. A minimum of 3 sessions is recommended for better results.</b>
+                    </li>
+                    <li>
+                        Results vary from person to person.
+                    </li>
+                    <li>
+                        All inks and creams used are vegan friendly and cruelty free.
+                    </li>
+                    <li> Initial consultation is <b>free</b> for all treaments. A £50 deposit will then be payable to secure your booking for any treatments.</li>
+                    <li><i>No refunds will be given after receiving treatment or failure to reschedule another date 48 hours before your appointment</i></li>
+                </ol>
+            </p>
+        </div>
+        <div class="glass-card">
+            <h2>Additional Services and price guide</h2>
+            <p>
+                <ul>
+                    <li>Lip filler 0.5ml £90</li>
+                    <li>Lip filler 0.7ml £100</li>
+                    <li>Lip filler 1.1ml £110</li>
+                    <li>Lip dissolve 0.7ml £100</li>
+                    <li>Skin booster 0.7ml £150</li>
+                    <li>Inkless patch test for stretch marks and scars £45</li>
+                    <li>Patch test for stretch marks and scars with ink £60</li>
+                    <li>Stretch marks & scar tattoo camouflage, prices start from £200</li>
+                    <li>Small scars from £150</li>
+                    <li>MCA inkless skin needling from £200, small scars from £150</li>
+                    <li><b><i>£50 booking fee required</i></b></li>
+                </ul>
+            </p>
+        </div>
+    </div>
 </body>
 </html>
+

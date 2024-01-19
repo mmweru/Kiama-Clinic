@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "ol": "^8.2.0"
+  },
+  "scripts": {
+    "start": "node ./server.js"
   }
 }
