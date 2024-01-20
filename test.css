@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Hide scrollbars */
+}
+
+.container {
+    position: relative;
+}
+
+
+.card-stack {
+    display: flex; /* Arrange cards in a flexible grid */
+    flex-wrap: wrap; /* Allow cards to wrap to multiple lines if needed */
+    justify-content: center; /* Align cards horizontally to the center */
+    align-items: center; /* Align cards vertically to the center */
+    height: 100vh; /* Take up full viewport height */
+    position: absolute; /* Position relative to the viewport */
+    top: 0; /* Position at the top of the viewport */
+    left: 0; /* Position at the left of the viewport */
+    width: 100%; /* Take up full viewport width */
+    background-color: transparent; /* Transparent background */
+    overflow: hidden; /* Hide content outside the stack */
+    z-index: 2; /* Place card stack above Sketchfab */
+    pointer-events: none; /* Allow clicks to pass through to the iframe */
+  }
+  
+.card {
+    width: 300px;
+    max-width: 80%;
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #333; /* Dark text color for better contrast */
+    background-color: #f0f0f0; /* Light background color */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeInOut 4s infinite, slideUp 2s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+  @media (max-width: 700px) { /* Adjust for screens 768px wide or narrower */
+    .card {
+      width: 100%; /* Make cards wider on smaller screens */
+    }
+  
+    .card h2 {
+      font-size: 1.2rem; /* Slightly smaller headings on smaller screens */
+    }
+  }
+
+#card2 {
+    background-color: rgba(128, 128, 128, 0.7); /* Silver with transparency */
+}
+
+.card h2 {
+    font-size: 1.5rem; /* Base font size for headings */
+  }
+  
+.card p {
+font-size: 1rem; /* Base font size for paragraphs */
+}
+
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Adjust as desired */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.sketchfab-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place Sketchfab below card stack */
+}
+
+
+
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Move rectangles down */
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-20px); /* Move rectangles up */
+    }
+}
+
+
+

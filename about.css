@@ -9,6 +9,7 @@ body {
     height: 100%;
     z-index: -1; /* Place it behind the content */
 }
+
 .back-video {
     position: absolute;
     width: 100%;
@@ -17,6 +18,7 @@ body {
     filter: none;
     z-index: -1;
 }
+
 @media (min-width: 1000px) {
     .back-video {
         object-fit: fill;
@@ -24,12 +26,12 @@ body {
         margin: 0 auto;
     }
 }
+
 @media (max-width: 700px) {
     .back-video {
         object-fit: cover;
     }
 }
-
 
 .glass-card-container {
     display: flex;
@@ -39,15 +41,16 @@ body {
 
 .glass-card {
     flex: 0 0 auto;
-    width: 900px;
-    height: 300px;
+    width: 90%; /* Adjust the width */
+    height: auto; /* Adjust the height */
     padding: 20px;
     margin: 10px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    color: #fff;
+    color: #000; /* Change the color to black for better visibility */
+    font-size: 1em; /* Adjust the font size */
 }
 
 @keyframes moveCards {
@@ -59,16 +62,12 @@ body {
     }
 }
 
-/* Hide audio controls */
-audio {
-    display: none;
-}
-
 /* Media queries for responsiveness */
 @media only screen and (max-width: 600px) {
     .glass-card {
         width: 100%; /* Adjust the width and height as needed */
         height: auto;
+        font-size: 0.8em; /* Adjust the font size */
     }
 }
 
@@ -76,12 +75,14 @@ audio {
     .glass-card {
         width: 100%; /* Adjust the width and height as needed */
         height: auto;
+        font-size: 0.9em; /* Adjust the font size */
     }
 }
 
 @media only screen and (min-width: 901px) {
     .glass-card {
-        width: 900px;
-        height: 300px;
+        width: 90%; /* Adjust the width */
+        height: auto; /* Adjust the height */
+        font-size: 1em; /* Adjust the font size */
     }
 }
