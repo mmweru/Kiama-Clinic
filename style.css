@@ -1,9 +1,23 @@
 body, html {
     height: 100%;
     margin: 0;
+    cursor: none;
     background: black;
     overflow: hidden;
     font-family: 'Poppins', sans-serif;
+}
+.cursor {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #FF00FF;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    text-align: center;
+    line-height: 100px;
+    background: linear-gradient(45deg, #ff00ff, #00ff00, #0000ff, #ff00ff);
+    mix-blend-mode: screen; /* Blend colors using screen mode */
 }
 
 /* Hero Section Styles */
