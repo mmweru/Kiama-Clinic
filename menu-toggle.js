@@ -1,19 +1,19 @@
 // Select navigation links and sections
-const navLinks = document.querySelectorAll('nav a');
-const sections = document.querySelectorAll('main section');
+//const navLinks = document.querySelectorAll('.nav-links');
+//const sections = document.querySelectorAll('main section');
 
 // Add event listeners to navigation links
-navLinks.forEach(link => {
-  link.addEventListener('click', handleNavClick);
-});
+// navLinks.forEach(link => {
+//   link.addEventListener('click', handleNavClick);
+// });
 
 // Handle navigation link clicks
-function handleNavClick(event) {
-  event.preventDefault(); // Prevent default link behavior
-  const targetSection = document.querySelector(event.target.hash);
-  smoothScrollTo(targetSection);
-  updateActiveLink(event.target);
-}
+// function handleNavClick(event) {
+//   event.preventDefault(); // Prevent default link behavior
+//   const targetSection = document.querySelector(event.target.hash);
+//   smoothScrollTo(targetSection);
+//   updateActiveLink(event.target);
+// }
 
 // Smooth scrolling function
 function smoothScrollTo(targetElement) {

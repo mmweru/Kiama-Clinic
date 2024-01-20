@@ -8,6 +8,36 @@ body {
     position: relative;
 }
 
+.navigation-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    z-index: 3; /* Adjust the z-index to make it appear on top */
+}
+
+.navigation-menu a {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    position: relative;
+}
+
+.navigation-menu a:hover {
+    outline: 2px solid transparent;
+    animation: neon-glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+    from {
+        outline-color: transparent;
+        box-shadow: 0 0 5px #ff00ff, 0 0 20px #ff00ff, 0 0 50px #ff00ff, 0 0 100px #ff00ff;
+    }
+    to {
+        outline-color: #ff00ff;
+        box-shadow: 0 0 5px #ff00ff, 0 0 20px #ff00ff, 0 0 50px #ff00ff, 0 0 100px #ff00ff;
+    }
+}
 
 .card-stack {
     display: flex; /* Arrange cards in a flexible grid */
@@ -23,8 +53,8 @@ body {
     overflow: hidden; /* Hide content outside the stack */
     z-index: 2; /* Place card stack above Sketchfab */
     pointer-events: none; /* Allow clicks to pass through to the iframe */
-  }
-  
+}
+
 .card {
     width: 300px;
     max-width: 80%;
@@ -43,15 +73,15 @@ body {
     pointer-events: none;
 }
 
-  @media (max-width: 700px) { /* Adjust for screens 768px wide or narrower */
+@media (max-width: 700px) {
     .card {
-      width: 100%; /* Make cards wider on smaller screens */
+        width: 100%;
     }
-  
+
     .card h2 {
-      font-size: 1.2rem; /* Slightly smaller headings on smaller screens */
+        font-size: 1.2rem;
     }
-  }
+}
 
 #card2 {
     background-color: rgba(128, 128, 128, 0.7); /* Silver with transparency */
@@ -59,12 +89,11 @@ body {
 
 .card h2 {
     font-size: 1.5rem; /* Base font size for headings */
-  }
-  
-.card p {
-font-size: 1rem; /* Base font size for paragraphs */
 }
 
+.card p {
+    font-size: 1rem; /* Base font size for paragraphs */
+}
 
 @keyframes fadeInOut {
     0%, 100% {
@@ -96,9 +125,6 @@ font-size: 1rem; /* Base font size for paragraphs */
     z-index: 1; /* Place Sketchfab below card stack */
 }
 
-
-
-
 @keyframes move {
     0% {
         opacity: 0;
@@ -115,6 +141,3 @@ font-size: 1rem; /* Base font size for paragraphs */
         transform: translateY(-20px); /* Move rectangles up */
     }
 }
-
-
-
