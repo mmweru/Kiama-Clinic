@@ -69,7 +69,7 @@ body {
 .glass-card-container {
     display: flex;
     position: relative;
-    animation: moveCards 22s linear infinite; /* Adjust the animation duration as needed */
+    animation: moveCards 62s linear infinite; /* Adjust the animation duration as needed */
 }
 
 .glass-card {
@@ -92,7 +92,7 @@ body {
         transform: translateX(100%);
     }
     to {
-        transform: translateX(-100%);
+        transform: translateX(-500%);
     }
 }
 
@@ -102,6 +102,9 @@ body {
         width: 100%; /* Adjust the width and height as needed */
         height: auto;
         font-size: 0.8em; /* Adjust the font size */
+    }
+    .glass-card-container{
+        scroll-snap-type: none;
     }
 }
 

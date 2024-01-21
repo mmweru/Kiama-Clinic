@@ -69,7 +69,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    animation: fadeInOut 4s infinite, slideUp 2s ease-in-out infinite alternate;
+    animation: fadeInOut 25s infinite, slideUp 10s ease-in-out infinite alternate;
     pointer-events: none;
 }
 
