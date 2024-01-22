@@ -166,7 +166,7 @@ body, html {
     text-align: center;
     font-family: sans-serif;
     transition: transform 0.3s ease-in-out; 
-    width: 90vw;
+    width: calc(90vw / var(--card-columns));
     margin: 12px;
     font-size: small;
   }
@@ -179,13 +179,33 @@ body, html {
   
   @media (max-width: 800px) { /* Example for smaller screens */
     .card-container {
-      top: 0%; 
-      /* min-width: 600px; */
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
     }
+    @keyframes card-entrance {
+      from { transform: translateY(100vh); opacity: 0; }
+      to { transform: translateY(10vh); opacity: 1; }
+    }
+    .card:hover {
+      opacity: 1; /* Change from default opacity for subtle fade-in */
+      transition: opacity 0.5s ease-in-out;
+      transform: scale(1.15); 
+    }
+    :root {
+      --card-columns: 2; /* Set starting number of columns for smaller screens */
+    }
+      
     .card {
-    height: 100vh;
-    font-size: smaller;
-  }
+      bottom: 5%;
+      opacity: 0.8;
+      width: 90vw;
+      font-size:smaller;
+      margin: 10px;
+      animation: card-entrance 0.5s ease-in-out forwards;
+      animation-delay: calc(0.1s * var(--position-index));
+    }
+    
 
   }
 

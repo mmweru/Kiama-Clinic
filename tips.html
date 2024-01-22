@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="trial.css">
 <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
@@ -18,18 +22,18 @@
 <div class="globe"></div>
 <div class="galaxy-stars"></div>
 <div class="card-container">
-    <div class="card">
+    <div class="card" style="--position-index: 1">
         <h2>Kiama Tips</h2>
         <p>"Beauty shouldn't be about changing yourself to achieve an ideal or be more socially acceptable.
             Real beauty, the interesting, truly pleasing kind, is about honoring the beauty within you and
             without you. It's about knowing that someone else's definition of pretty has no hold over you."🤓
         </p>
     </div>
-    <div class="card">
+    <div class="card" style="--position-index: 2">
         <h2>Kiama Tips</h2>
         <p>By stopping licking, biting, and picking at your lips can get rid of dry lips 😉.</p>
     </div>
-    <div class="card">
+    <div class="card" style="--position-index: 3">
         <h2>Kiama Tips</h2>
         <p>By mixing coconut oil and vaseline and using it on your lashes before going to bed can lead to
             longer lashes. 🤔.</p>
@@ -37,7 +41,7 @@
 </div>
 <script>
     const galaxyStars = document.querySelector('.galaxy-stars');
-    const starCount = 300; // Adjust for desired star density
+    const starCount = 500; // Adjust for desired star density
 
   for (let i = 0; i < starCount; i++) {
   const star = document.createElement('div');
